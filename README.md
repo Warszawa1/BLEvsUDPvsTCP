@@ -1,9 +1,11 @@
-# BLEvsUDPvsTCP
+# BLE vs UDP vs TCP
 Technical Analysis: BLE vs UDP vs TCP for iOS-Connected Wearables
 
 
 Why TCP Works When BLE and UDP Failed for On-Body Wireless Sensors
+
 When building wearable sensors that communicate with an iPhone, I tested three approaches with very different results.
+
 BLE: Failed at Body Distance
 BLE operates at 2.4 GHz, which the human body significantly attenuates. Research shows:
 
@@ -12,6 +14,7 @@ BLE operates at 2.4 GHz, which the human body significantly attenuates. Research
 * Water absorbs 2.4 GHz at ~330 dB/m, and the human body is ~60-70% water³
 
 When sensors are strapped to ankles, the signal path to a phone in hand/pocket passes through or around legs and torso—enough obstruction to cause connection drops.
+
 UDP over WiFi Hotspot: Failed Silently
 Sensors connected to iPhone's Personal Hotspot and sent UDP packets. The iOS app's NWListener showed "ready" but never received data.
 According to Apple's official documentation, iOS Local Network Privacy works asymmetrically:
