@@ -24,6 +24,7 @@ Sending UDP: requires permission⁴
 Listening for TCP connections: does NOT require permission⁴
 
 The likely issue: without the app sending any outbound traffic first, there's no NAT state or permission trigger. The UDP packets may arrive at the iPhone but have no established path to the app.
+
 TCP over WiFi Hotspot: Worked Immediately
 With TCP, the sensor initiates a connection to the iOS app's NWListener. Apple explicitly states:
 
